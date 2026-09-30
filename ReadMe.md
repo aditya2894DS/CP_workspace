@@ -6,3 +6,11 @@
     cin >> name;
     cout << "Hello, " << name;
 ```
+
+### Data Types
+
+### Escape sequences
+
+### Strings
+
+### Math functions(```<cmath>```)
