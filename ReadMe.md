@@ -495,6 +495,9 @@ v.front(); v.back();
 v.insert(v.begin() + 1, 10);
 v.erase(v.begin());
 v.clear();
+
+// pre defined size
+std::vector<int> vec(5); // Creates: {0, 0, 0, 0, 0}
 ```
 
 ### list, deque

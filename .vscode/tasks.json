@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CP: build & run (input.txt -> output.txt)",
+      "type": "shell",
+      "command": "g++ -std=c++17 -O2 -Wall -DLOCAL \"${file}\" -o \"${workspaceFolder}\\output.exe\" && \"${workspaceFolder}\\output.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\"",
+      "options": {
+        "cwd": "${fileDirname}",
+        "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] }
+      },
+      "problemMatcher": ["$gcc"],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "clear": true }
+    }
+  ]
+}
