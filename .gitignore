@@ -6,3 +6,4 @@ bin/
 *.exp
 *.ilk
 *.pdb
+.vscode/
