@@ -1,1 +1,1 @@
-Is array sorted?:false
+false

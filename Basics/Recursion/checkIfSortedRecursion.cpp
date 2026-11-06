@@ -1,24 +1,23 @@
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
-bool checkSortedWithRecursion(vector<int> arr, int num){
-
-    if(num == (int)arr.size()-1){ 
-	    return true;
-    }
-    if(arr[num] > arr[num +1]){
-        return false;
-    }else {
-      return checkSortedWithRecursion(arr, num+1);
-    }
-
-}
-
-int main() 
+bool checkIfSortedRecursion(vector<int> arr, int currentIndex)
 {
-  vector<int> arr = {1, 5, 7, 8, 33};
-  bool result = checkSortedWithRecursion(arr, 0);
-  cout << "Is array sorted?:" << boolalpha << result;
+
+    if (currentIndex >= (int)arr.size() - 1)
+        return true;
+    if (arr[currentIndex] > arr[currentIndex + 1])
+        return false;
+    else
+        return checkIfSortedRecursion(arr, currentIndex + 1);
 }
 
-
+int main()
+{
+    // Write C++ code here
+    vector<int> arr = {1, 5, 7, 34, 33};
+    cout << boolalpha << checkIfSortedRecursion(arr, 0);
+    return 0;
+}
